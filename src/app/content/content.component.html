@@ -1,0 +1,8 @@
+<!-- div form with two input elements and a button-->
+<div class="form-group">
+  <input type="text" class="form-control" id="fName" name="firstName" [(ngModel)]="firstName" #fName >
+  <input type="text" class="form-control" id="lName" [(ngModel)]="lastName" #lName>
+  <button type="button" class="btn btn-primary" (click)="getDetails(fName.value,lName.value)">Get Details</button>
+</div>
+<!-- display component selector -->
+<app-display [title]="displayMessage" *ngIf="showTitle"></app-display>
